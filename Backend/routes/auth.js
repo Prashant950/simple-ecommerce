@@ -6,7 +6,7 @@ const User  = require('../models/User');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 
-// const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const Product = require('../models/Product'); // Import the model
 const Order = require('../models/Order');
@@ -205,10 +205,10 @@ router.post('/saveuser', async (req, res) => {
 
 
 
-// const razorpay = new Razorpay({
-//   key_id: process.env.RAZORPAY_KEY_ID,  // <--  KEY_ID
-//   key_secret: process.env.RAZORPAY_KEY_SECRET,      // <--  SECRET_KEY
-// });
+const razorpay = new Razorpay({
+  key_id: process.env.RAZORPAY_KEY_ID,  // <--  KEY_ID
+  key_secret: process.env.RAZORPAY_KEY_SECRET,      // <--  SECRET_KEY
+});
 
 
 
