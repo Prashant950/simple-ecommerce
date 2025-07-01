@@ -205,10 +205,6 @@ router.post('/saveuser', async (req, res) => {
 
 
 
-const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID,  // <--  KEY_ID
-  key_secret: process.env.RAZORPAY_KEY_SECRET,      // <--  SECRET_KEY
-});
 
 
 
